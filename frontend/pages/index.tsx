@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Box, Button, Flex, Spacer, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, VStack } from '@chakra-ui/react';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           <Link href="/login">Login</Link>
         </Button>
       </Flex>
-      <VStack spacing={4} align="center" mt="auto" mb="auto" width={800}>
+      <VStack spacing={4} align="center" mt="auto" mb="auto" width="50%">
         <Box textStyle="h1">SpineCARE</Box>
         <Box textStyle="h3" textAlign="center">
           AI powered companion monitoring and managing adolescent idiopathic scoliosis, guiding you towards a straighter spine
