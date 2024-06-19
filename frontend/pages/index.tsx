@@ -1,20 +1,25 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import { Box, Button, Flex, Spacer, VStack } from '@chakra-ui/react';
 
 export default function Home() {
   return (
-    <div>
-      <div>
-        <p>
-          <Link href="/about">about</Link>
-        </p>
-        <p>
-          <Link href="/login">login</Link>
-        </p>
-      </div>
-      <h1>SpineCARE</h1>
-      <h3>AI powered companion monitoring and managing adolescent idiopathic scoliosis, guilding you towards a straighter spine</h3>
-      <Image src='/logo.png' alt='logo' width={500} height={500}/>
-    </div>
+    <Flex direction="column" align="center" minH="100vh" p={5}>
+      <Flex w="100%" justify="flex-end" p={5}>
+        <Button mr={4}>
+          <Link href="/about">About</Link>
+        </Button>
+        <Button>
+          <Link href="/login">Login</Link>
+        </Button>
+      </Flex>
+      <VStack spacing={4} align="center" mt="auto" mb="auto" width={800}>
+        <Box textStyle="h1">SpineCARE</Box>
+        <Box textStyle="h3" textAlign="center">
+          AI powered companion monitoring and managing adolescent idiopathic scoliosis, guiding you towards a straighter spine
+        </Box>
+        <Image src="/logo.png" alt="logo" width={500} height={500} />
+      </VStack>
+    </Flex>
   );
 }
