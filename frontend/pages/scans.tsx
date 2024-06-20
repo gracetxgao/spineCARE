@@ -20,7 +20,7 @@ export default function Scans() {
       <Flex justifyContent="space-between" alignItems="center" borderBottom="1px solid #E2E8F0" paddingBottom="1rem" marginBottom="2rem">
         <Flex>
           <ChakraLink as={Link} href="/scans" marginRight="2rem">Images</ChakraLink>
-          <ChakraLink as={Link} href="/progression" marginRight="2rem">Progression</ChakraLink>
+          <ChakraLink as={Link} href="/progress" marginRight="2rem">Progression</ChakraLink>
           <ChakraLink as={Link} href="/reminders" marginRight="2rem">Reminders</ChakraLink>
         </Flex>
         <Link href="/about">

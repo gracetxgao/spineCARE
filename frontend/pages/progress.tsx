@@ -255,7 +255,7 @@ const footerText: React.CSSProperties = {
 };
 
 
-export default function Progression() {
+export default function Progress() {
     return (
         <div style={all}>
             <nav style={navbarStyle}>
