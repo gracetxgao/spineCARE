@@ -7,7 +7,6 @@ const all = {
     padding: '0px',
     margin: '0px'
 };
-  
 
 const navbarStyle: React.CSSProperties = {
     display: 'flex',
@@ -65,6 +64,7 @@ const statsStyle: React.CSSProperties = {
     justifyContent: 'space-between'
 };
 
+
 const curveStatStyle: React.CSSProperties = {
     backgroundImage: 'url("statsbg.png")',
     // backgroundColor: '#EEF5FF',
@@ -110,9 +110,9 @@ const bottomStatText: React.CSSProperties = {
 
 const curveGraphbox: React.CSSProperties = {
     width: '60%',
-    marginLeft: '15px'
-    
+    marginLeft: '10px'
 };
+
 const legendBox: React.CSSProperties = {
     width: '40%',
 };
@@ -126,29 +126,132 @@ const imageBox: React.CSSProperties = {
 
 const legendStyle: React.CSSProperties = {
     backgroundColor: 'white',
-    border: '1.5px solid #cccc',
+    border: '1px solid #cccc',
     borderRadius: '10px',
     flex: '1',
     textAlign: 'left',
     padding: '20px',
+    marginTop: '7px',
     margin: '20px',
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)'
 };
 
-const legendTitleText: React.CSSProperties = {
-    fontSize: '13px', 
+const titleText: React.CSSProperties = {
+    fontSize: '15px', 
     fontWeight: 'bold',
     fontFamily: 'helvetica',
-    marginBottom: '10px' 
+    marginBottom: '20px' 
 };
 
-const braceStyle: React.CSSProperties = {
+const bottomStatsStyle: React.CSSProperties = {
     backgroundColor: 'white',
     padding: '15px',
     marginLeft: '30px',
     marginRight: '30px',
     display: 'flex',
     justifyContent: 'center'
+};
+
+const buttonStatsStyle: React.CSSProperties = {
+    backgroundColor: 'white',
+    padding: '0px',
+    marginLeft: '45px',
+    marginRight: '45px',
+    marginTop: '25px',
+    display: 'flex',
+    justifyContent: 'left'
+};
+
+const physioBox: React.CSSProperties = {
+    width: '40%',
+    backgroundColor: 'white',
+    border: '1px solid #cccc',
+    borderRadius: '10px',
+    textAlign: 'left',
+    padding: '10px',
+    margin: '10px',
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)'
+};
+
+const physioButtonBox: React.CSSProperties = {
+    width: '40%',
+    backgroundColor: 'white',
+    border: '0px solid #cccc',
+    borderRadius: '10px',
+    textAlign: 'left',
+    paddingLeft: '10px',
+    margin: '0px',
+};
+
+const braceBox: React.CSSProperties = {
+    width: '60%',
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '0px'
+};
+
+const braceButtonBox: React.CSSProperties = {
+    width: '40%',
+    backgroundColor: 'white',
+    border: '0px solid #cccc',
+    borderRadius: '10px',
+    textAlign: 'left',
+    paddingLeft: '20px',
+    marginTop: '0px',
+};
+
+const physioTable: React.CSSProperties = {
+    backgroundColor: 'white',
+    width: '90%',
+    border: '0px solid #cccc',
+    borderRadius: '10px',
+    textAlign: 'left',
+    padding: '20px',
+    margin: '20px',
+
+};
+
+const tableHeader: React.CSSProperties = {
+    color: '#8A8F92',
+    fontFamily: 'helvetica',
+    border: '0px solid #cccc',
+    borderRadius: '10px',
+};
+
+const tableSession: React.CSSProperties = {
+    backgroundColor: 'white',
+    borderBottom: '1px solid #cccc',
+    textAlign: 'left',
+    fontFamily: 'arial',
+    fontWeight: 'normal',
+    paddingTop: '7px',
+    paddingBottom: '7px'
+};
+
+const tableDateHour: React.CSSProperties = {
+    backgroundColor: 'white',
+    borderBottom: '1px solid #cccc',
+    textAlign: 'right',
+    fontFamily: 'arial',
+    fontWeight: 'normal',
+    paddingTop: '7px',
+    paddingBottom: '7px'
+};
+
+
+const footerBox: React.CSSProperties = {
+    height: '150px',
+    backgroundColor: '#EEF5FF',
+    marginTop: '50px',
+    display: 'flex',
+    alignItems: 'center', 
+    justifyContent: 'center',
+};
+
+const footerText: React.CSSProperties = {
+    textAlign: 'center',
+    fontWeight: 'normal',
+    fontFamily: 'helvetica'
 };
 
 
@@ -162,9 +265,9 @@ export default function Progression() {
                 </div>
 
                 <div style={pages}>
-                    <button style={buttonStyle}>Images</button>
-                    <Button>Progression</Button>
-                    <button style={buttonStyle}>Reminders</button>
+                    <button style={buttonStyle}><Link href="/scans">Scans</Link></button>
+                    <Button><Link href="/progress">Progress</Link></Button>
+                    <button style={buttonStyle}><Link href="/reminders">Reminders</Link></button>
                 </div>
 
                 <div style={navbarStyle}>
@@ -201,22 +304,105 @@ export default function Progression() {
                 </div>
                 <div style={legendBox}>
                     <div style={legendStyle}>
-                        <div style={legendTitleText}>Legend</div>
-                        <img src="greycircle.png"/>
-                        <img src="bluecircle.png"/>
+                        <div style={titleText}>Legend</div>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                </th>
+                                <th>
+                                    <tr>Thoracic</tr>
+                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                        <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
+                                    </tr>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                </th>
+                                <th>
+                                    <tr>Lumbar</tr>
+                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                        <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
+                                    </tr>
+                                </th>
+                            </tr>
+                        </table>
+                        
+                        
                     </div>
                 </div>
             </div>
 
-
-            <div style={braceStyle}>
-                <div style={imageBox}>
-                    <img src="braceGraph.png"/>
+            <div style={buttonStatsStyle}>
+                <div style={physioButtonBox}>
+                    <Button>+ Physiotherapy</Button>
                 </div>
+                <div style={braceButtonBox}>
+                    <Button>+ Brace Wear</Button>
+                </div>
+            </div>
+            
+
+            <div style={bottomStatsStyle}>
+                <div style={physioBox}>
+                    <table style={physioTable}>
+                        <div style={titleText}>Physiotherapy Progress</div>
+                        <tr>
+                            <th style={tableSession}><div style={tableHeader}>Session</div></th>
+                            <th style={tableDateHour}><div style={tableHeader}>Date</div></th>
+                            <th style={tableDateHour}><div style={tableHeader}>Hours</div></th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 6</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 10</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 12</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Schroth Method with Alice</th>
+                            <th style={tableDateHour}>June 20</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy at Home</th>
+                            <th style={tableDateHour}>June 25</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Schroth Method with Alice</th>
+                            <th style={tableDateHour}>June 30</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy at Home</th>
+                            <th style={tableDateHour}>July 10</th>
+                            <th style={tableDateHour}>-1</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style={braceBox}>
+                    <img src="braceGraph.png" alt="braceGraph"/>
+                </div>
+
+            </div>
+
+            <div style={footerBox}>
+                <div style={footerText}>SpineCARE</div>
             </div>
 
         </div>
-
 
     )
 }
