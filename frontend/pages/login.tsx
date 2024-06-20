@@ -7,7 +7,7 @@ export default function Login() {
             <h1>Log in</h1>
             <Input placeholder='Username' />
             <Input placeholder='Password' />
-            <Link href="/progression">
+            <Link href="/scans">
                 <Button colorScheme='blue'>Log in</Button>
             </Link>
         </div>
