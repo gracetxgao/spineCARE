@@ -42,7 +42,7 @@ def predict():
     logits = logits.cpu().numpy()[0]
     predictions = {labels[i]: float(logits[i]) for i in range(len(labels))}
     response = make_response(jsonify(predictions))
-    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000/upload")
+    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
     response.headers.add("Access-Control-Allow-Headers", "Content-Type")
     response.headers.add("Access-Control-Allow-Methods", "POST")
     return response
