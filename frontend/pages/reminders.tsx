@@ -1,18 +1,9 @@
 import Link from 'next/link';
 import React from 'react'
 import { Box, Button, Flex, Text, Link as ChakraLink } from '@chakra-ui/react';
-  import { Checkbox } from '@chakra-ui/react'
-  import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-  } from '@chakra-ui/react'
+import { Checkbox, IconButton, } from '@chakra-ui/react'
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableContainer } from '@chakra-ui/react'
+import { SmallCloseIcon} from '@chakra-ui/icons'
 
 const reminders = ["reminder 1", "reminder 2"]
 
@@ -48,6 +39,7 @@ export default function Reminders() {
                         <Th>Task</Th>
                         <Th>Date</Th>
                         <Th isNumeric>Time</Th>
+                        <Th isNumeric></Th>
                     </Tr>
                     </Thead>
                     <Tbody>
@@ -55,31 +47,61 @@ export default function Reminders() {
                         <Td><Checkbox>Wear brace</Checkbox></Td>
                         <Td>2023/07/11</Td>
                         <Td isNumeric>09:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     <Tr>
                         <Td><Checkbox>Take brace off</Checkbox></Td>
                         <Td>2023/07/11</Td>
                         <Td isNumeric>17:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     <Tr>
                         <Td><Checkbox>Wear brace</Checkbox></Td>
                         <Td>2023/07/12</Td>
                         <Td isNumeric>09:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     <Tr>
                         <Td><Checkbox>Take brace off</Checkbox></Td>
                         <Td>2023/07/12</Td>
                         <Td isNumeric>17:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     <Tr>
                         <Td><Checkbox>Physician appointment</Checkbox></Td>
                         <Td>2023/07/13</Td>
                         <Td isNumeric>15:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     <Tr>
                         <Td><Checkbox>Physician appointment</Checkbox></Td>
                         <Td>2024/01/08</Td>
                         <Td isNumeric>10:00</Td>
+                        <Td isNumeric><IconButton
+                        aria-label='exit'
+                        fontSize='15px'
+                        icon={<SmallCloseIcon />}
+                        /></Td>
                     </Tr>
                     </Tbody>
                 </Table>
