@@ -1,6 +1,158 @@
 import Link from 'next/link';
 import { Box, Button, Flex, VStack } from '@chakra-ui/react';
 
+
+export default function Progress() {
+    return (
+        <div style={all}>
+            <nav style={navbarStyle}>
+                <div style={logoContainerStyle}>
+                    <img src="logo_flower.png" alt="Logo" style={logoStyle}/>
+                    <span style={{fontSize: '1.2rem', fontFamily: 'helvetica'}}>SpineCARE</span>
+                </div>
+
+                <div style={pages}>
+                    <button style={buttonStyle}><Link href="/scans">Scans</Link></button>
+                    <Button><Link href="/progress">Progress</Link></Button>
+                    <button style={buttonStyle}><Link href="/reminders">Reminders</Link></button>
+                </div>
+
+                <div style={navbarStyle}>
+                    <Button>Sign Out</Button>
+                    <div style={profileContainerStyle}>
+                        <img src="profileicon.png" alt="Profile" style={profileStyle}/>
+                    </div>
+                </div>
+            </nav>
+
+            <div style={statsStyle}>
+                <div style={curveStatStyle}>
+                    <div style={topStatText}>Current Curvature</div>
+                    <div style={middleStatText}>31°, 20°</div>
+                    <div style={bottomStatText}>-0.7% over month</div>
+                </div>
+                <div style={eachStatStyle}>
+                    <div style={topStatText}>Daily Brace Wear Average</div>
+                    <div style={middleStatText}>17 hours</div>
+                    <div style={bottomStatText}>-10% over month</div>
+                </div>
+                <div style={eachStatStyle}>
+                    <div style={topStatText}>Total Physiotherapy Sessions</div>
+                    <div style={middleStatText}>10 hours</div>
+                    <div style={bottomStatText}>+12% over month</div>
+                </div>
+            </div>
+
+            <div style={statsStyle}>
+                <div style={curveGraphbox}>
+                    <div style={imageBox}>
+                        <img src="curvatureGraph.png" alt="curveGraph"/>
+                    </div>
+                </div>
+                <div style={legendBox}>
+                    <div style={legendStyle}>
+                        <div style={titleText}>Legend</div>
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                </th>
+                                <th>
+                                    <tr>Thoracic</tr>
+                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                        <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
+                                    </tr>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                </th>
+                                <th>
+                                    <tr>Lumbar</tr>
+                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                        <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
+                                    </tr>
+                                </th>
+                            </tr>
+                        </table>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div style={buttonStatsStyle}>
+                <div style={physioButtonBox}>
+                    <Button>+ Physiotherapy</Button>
+                </div>
+                <div style={braceButtonBox}>
+                    <Button>+ Brace Wear</Button>
+                </div>
+            </div>
+            
+
+            <div style={bottomStatsStyle}>
+                <div style={physioBox}>
+                    <table style={physioTable}>
+                        <div style={titleText}>Physiotherapy Progress</div>
+                        <tr>
+                            <th style={tableSession}><div style={tableHeader}>Session</div></th>
+                            <th style={tableDateHour}><div style={tableHeader}>Date</div></th>
+                            <th style={tableDateHour}><div style={tableHeader}>Hours</div></th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 6</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 10</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy with John</th>
+                            <th style={tableDateHour}>June 12</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Schroth Method with Alice</th>
+                            <th style={tableDateHour}>June 20</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy at Home</th>
+                            <th style={tableDateHour}>June 25</th>
+                            <th style={tableDateHour}>+1</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Schroth Method with Alice</th>
+                            <th style={tableDateHour}>June 30</th>
+                            <th style={tableDateHour}>+0.5</th>
+                        </tr>
+                        <tr>
+                            <th style={tableSession}>Physiotherapy at Home</th>
+                            <th style={tableDateHour}>July 10</th>
+                            <th style={tableDateHour}>-1</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style={braceBox}>
+                    <img src="braceGraph.png" alt="braceGraph"/>
+                </div>
+
+            </div>
+
+            <div style={footerBox}>
+                <div style={footerText}>SpineCARE</div>
+            </div>
+        </div>
+
+    )
+}
+
 const all = {
     backgroundColor: 'white',
     minHeight: '100vh',
@@ -253,156 +405,3 @@ const footerText: React.CSSProperties = {
     fontWeight: 'normal',
     fontFamily: 'helvetica'
 };
-
-
-export default function Progress() {
-    return (
-        <div style={all}>
-            <nav style={navbarStyle}>
-                <div style={logoContainerStyle}>
-                    <img src="logo_flower.png" alt="Logo" style={logoStyle}/>
-                    <span style={{fontSize: '1.2rem', fontFamily: 'helvetica'}}>SpineCARE</span>
-                </div>
-
-                <div style={pages}>
-                    <button style={buttonStyle}><Link href="/scans">Scans</Link></button>
-                    <Button><Link href="/progress">Progress</Link></Button>
-                    <button style={buttonStyle}><Link href="/reminders">Reminders</Link></button>
-                </div>
-
-                <div style={navbarStyle}>
-                    <Button>Sign Out</Button>
-                    <div style={profileContainerStyle}>
-                        <img src="profileicon.png" alt="Profile" style={profileStyle}/>
-                    </div>
-                </div>
-            </nav>
-
-            <div style={statsStyle}>
-                <div style={curveStatStyle}>
-                    <div style={topStatText}>Current Curvature</div>
-                    <div style={middleStatText}>31°, 20°</div>
-                    <div style={bottomStatText}>-0.7% over month</div>
-                </div>
-                <div style={eachStatStyle}>
-                    <div style={topStatText}>Daily Brace Wear Average</div>
-                    <div style={middleStatText}>17 hours</div>
-                    <div style={bottomStatText}>-10% over month</div>
-                </div>
-                <div style={eachStatStyle}>
-                    <div style={topStatText}>Total Physiotherapy Sessions</div>
-                    <div style={middleStatText}>10 hours</div>
-                    <div style={bottomStatText}>+12% over month</div>
-                </div>
-            </div>
-
-            <div style={statsStyle}>
-                <div style={curveGraphbox}>
-                    <div style={imageBox}>
-                        <img src="curvatureGraph.png" alt="curveGraph"/>
-                    </div>
-                </div>
-                <div style={legendBox}>
-                    <div style={legendStyle}>
-                        <div style={titleText}>Legend</div>
-                        <table>
-                            <tr>
-                                <th>
-                                    <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                </th>
-                                <th>
-                                    <tr>Thoracic</tr>
-                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                        <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
-                                    </tr>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                </th>
-                                <th>
-                                    <tr>Lumbar</tr>
-                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                        <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
-                                    </tr>
-                                </th>
-                            </tr>
-                        </table>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div style={buttonStatsStyle}>
-                <div style={physioButtonBox}>
-                    <Button>+ Physiotherapy</Button>
-                </div>
-                <div style={braceButtonBox}>
-                    <Button>+ Brace Wear</Button>
-                </div>
-            </div>
-            
-
-            <div style={bottomStatsStyle}>
-                <div style={physioBox}>
-                    <table style={physioTable}>
-                        <div style={titleText}>Physiotherapy Progress</div>
-                        <tr>
-                            <th style={tableSession}><div style={tableHeader}>Session</div></th>
-                            <th style={tableDateHour}><div style={tableHeader}>Date</div></th>
-                            <th style={tableDateHour}><div style={tableHeader}>Hours</div></th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Physiotherapy with John</th>
-                            <th style={tableDateHour}>June 6</th>
-                            <th style={tableDateHour}>+1</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Physiotherapy with John</th>
-                            <th style={tableDateHour}>June 10</th>
-                            <th style={tableDateHour}>+0.5</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Physiotherapy with John</th>
-                            <th style={tableDateHour}>June 12</th>
-                            <th style={tableDateHour}>+0.5</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Schroth Method with Alice</th>
-                            <th style={tableDateHour}>June 20</th>
-                            <th style={tableDateHour}>+1</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Physiotherapy at Home</th>
-                            <th style={tableDateHour}>June 25</th>
-                            <th style={tableDateHour}>+1</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Schroth Method with Alice</th>
-                            <th style={tableDateHour}>June 30</th>
-                            <th style={tableDateHour}>+0.5</th>
-                        </tr>
-                        <tr>
-                            <th style={tableSession}>Physiotherapy at Home</th>
-                            <th style={tableDateHour}>July 10</th>
-                            <th style={tableDateHour}>-1</th>
-                        </tr>
-                    </table>
-                </div>
-
-                <div style={braceBox}>
-                    <img src="braceGraph.png" alt="braceGraph"/>
-                </div>
-
-            </div>
-
-            <div style={footerBox}>
-                <div style={footerText}>SpineCARE</div>
-            </div>
-
-        </div>
-
-    )
-}

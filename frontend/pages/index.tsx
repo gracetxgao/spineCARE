@@ -12,9 +12,6 @@ export default function Home() {
         <Button>
           <Link href="/login">Login</Link>
         </Button>
-        <Button>
-          <Link href="/progress">Progress</Link>
-        </Button>
       </Flex>
       <VStack spacing={4} align="center" mt="auto" mb="auto" width="50%">
         <Box textStyle="h1">SpineCARE</Box>
