@@ -5,12 +5,19 @@ import { Box, Button, Flex, Text, VStack } from '@chakra-ui/react';
 
 export default function About() {
   return (
-    <Flex direction="column" minH="100vh" p={5}>
-      <Flex w="100%" justify="flex-end" p={5}>
-        <Button>
-          <Link href="/login">Login</Link>
-        </Button>
-      </Flex>
+    <Flex direction="column" minH="100vh">
+      <nav style={navbarStyle}>
+        <div style={logoContainerStyle}>
+            <img src="logo_flower.png" alt="Logo" style={logoStyle}/>
+            <span style={{fontSize: '1.2rem', fontFamily: 'helvetica'}}>SpineCARE</span>
+        </div>
+
+        <div style={navbarStyle}>
+          <Button>
+            <Link href="/login">Login</Link>
+          </Button>
+        </div>
+      </nav>
 
       <Flex 
         flex="1" 
@@ -101,7 +108,50 @@ export default function About() {
           </Box>
         </Box>
       </Flex>
+      <div style={footerBox}>
+        <div style={footerText}>SpineCARE</div>
+        <Link href={'https://github.com/gracetxgao/spineCARE'}>
+          <Image src='/github.png' alt='logo' width={40} height={40}/>
+        </Link>
+      </div>
     </Flex>
   );
 }
 
+const navbarStyle: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  backgroundColor: 'white',
+  color: 'black',
+  padding: '10px 20px'
+};
+
+const logoContainerStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center'
+};
+
+const logoStyle: React.CSSProperties = {
+  width: '90px', 
+  height: 'auto',
+  marginRight: '10px'
+};
+
+const footerBox: React.CSSProperties = {
+  width: '100vw',
+  height: '150px',
+  backgroundColor: '#EEF5FF',
+  marginTop: '50px',
+  display: 'flex',
+  alignItems: 'center', 
+  justifyContent: 'center',
+  flexDirection: 'column'
+};
+
+const footerText: React.CSSProperties = {
+  textAlign: 'center',
+  fontWeight: 'normal',
+  fontFamily: 'helvetica',
+  paddingBottom: '20px'
+};
