@@ -113,9 +113,49 @@ export default function Reminders() {
                             /></Td>
                         </Tr>
                         <Tr>
+                            <Td><Checkbox>Make physio appointment</Checkbox></Td>
+                            <Td>2024/01/01</Td>
+                            <Td isNumeric>11:00</Td>
+                            <Td isNumeric><IconButton
+                            aria-label='exit'
+                            fontSize='15px'
+                            icon={<SmallCloseIcon />}
+                            /></Td>
+                        </Tr>
+                        <Tr>
+                            <Td><Checkbox>Daily stretches</Checkbox></Td>
+                            <Td>2024/01/03</Td>
+                            <Td isNumeric>09:00</Td>
+                            <Td isNumeric><IconButton
+                            aria-label='exit'
+                            fontSize='15px'
+                            icon={<SmallCloseIcon />}
+                            /></Td>
+                        </Tr>
+                        <Tr>
+                            <Td><Checkbox>Go to checkup</Checkbox></Td>
+                            <Td>2024/02/24</Td>
+                            <Td isNumeric>15:00</Td>
+                            <Td isNumeric><IconButton
+                            aria-label='exit'
+                            fontSize='15px'
+                            icon={<SmallCloseIcon />}
+                            /></Td>
+                        </Tr>
+                        <Tr>
                             <Td><Checkbox>Physician appointment</Checkbox></Td>
-                            <Td>2024/01/08</Td>
+                            <Td>2024/2/27</Td>
                             <Td isNumeric>10:00</Td>
+                            <Td isNumeric><IconButton
+                            aria-label='exit'
+                            fontSize='15px'
+                            icon={<SmallCloseIcon />}
+                            /></Td>
+                        </Tr>
+                        <Tr>
+                            <Td><Checkbox>Wear Brace</Checkbox></Td>
+                            <Td>2024/03/02</Td>
+                            <Td isNumeric>07:00</Td>
                             <Td isNumeric><IconButton
                             aria-label='exit'
                             fontSize='15px'
@@ -141,15 +181,13 @@ const footerBox: React.CSSProperties = {
     width: '100vw',
     height: '150px',
     backgroundColor: '#EEF5FF',
+    marginTop: '50px',
     display: 'flex',
     alignItems: 'center', 
     justifyContent: 'center',
-    flexDirection: 'column',
-    position: 'fixed',
-    bottom: '0',
-    left: '0',
-  };
-  
+    flexDirection: 'column'
+};
+
 const footerText: React.CSSProperties = {
     textAlign: 'center',
     fontWeight: 'normal',
