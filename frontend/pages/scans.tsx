@@ -47,7 +47,7 @@ export default function Scans() {
         </Flex>
       </Flex>
 
-      <Box p="3rem">
+      <Box p="2rem">
         <Heading as="h2" size="lg" mb="1rem">Your Scans</Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing="1rem" mb="2rem">
           {scans.map(scan => (

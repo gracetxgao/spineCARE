@@ -39,142 +39,148 @@ export default function Progress() {
                 </Flex>
             </Flex>
 
-            <Box flexDirection={['column', 'row']}
-            sx={{
-                backgroundColor: 'white',
-                padding: '15px',
-                marginLeft: '30px',
-                marginRight: '30px',
-                display: 'flex',
-                justifyContent: 'space-between',
-            }}>
-                <div style={curveStatStyle}>
-                    <div style={topStatText}>Current Curvature</div>
-                    <div style={middleStatText}>31°, 20°</div>
-                    <div style={bottomStatText}>-0.7% over month</div>
-                </div>
-                <div style={eachStatStyle}>
-                    <div style={topStatText}>Daily Brace Wear Average</div>
-                    <div style={middleStatText}>17 hours</div>
-                    <div style={bottomStatText}>-10% over month</div>
-                </div>
-                <div style={eachStatStyle}>
-                    <div style={topStatText}>Total Physiotherapy Sessions</div>
-                    <div style={middleStatText}>10 hours</div>
-                    <div style={bottomStatText}>+12% over month</div>
-                </div>
-            </Box>
-
-            <Box flexDirection={['column', 'row']} sx={{
-                backgroundColor: 'white',
-                padding: '15px',
-                marginLeft: '30px',
-                marginRight: '30px',
-                display: 'flex',
-                justifyContent: 'space-between',
-
-            }}>
-                <div style={curveGraphbox}>
-                    <div style={imageBox}>
-                        <img src="curvatureGraph.png" alt="curveGraph" width='100%'/>
+            <Box p='2rem'>
+                <Box flexDirection={['column', 'row']}
+                sx={{
+                    backgroundColor: 'white',
+                    // padding: '15px',
+                    // marginLeft: '30px',
+                    // marginRight: '30px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                }}>
+                    <div style={curveStatStyle}>
+                        <div style={topStatText}>Current Curvature</div>
+                        <div style={middleStatText}>31°, 20°</div>
+                        <div style={bottomStatText}>-0.7% over month</div>
                     </div>
-                </div>
-                <div style={legendBox}>
-                    <div style={legendStyle}>
-                        <div style={titleText}>Legend</div>
-                        <table>
-                            <tr>
-                                <th>
-                                    <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                </th>
-                                <th>
-                                    <tr>Thoracic</tr>
-                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                        <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
-                                    </tr>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                </th>
-                                <th>
-                                    <tr>Lumbar</tr>
-                                    <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                        <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
-                                    </tr>
-                                </th>
-                            </tr>
-                        </table>
-                        
-                        
+                    <div style={eachStatStyle}>
+                        <div style={topStatText}>Daily Brace Wear Average</div>
+                        <div style={middleStatText}>17 hours</div>
+                        <div style={bottomStatText}>-10% over month</div>
                     </div>
-                </div>
-            </Box>
+                    <div style={eachStatStyle}>
+                        <div style={topStatText}>Total Physiotherapy Sessions</div>
+                        <div style={middleStatText}>10 hours</div>
+                        <div style={bottomStatText}>+12% over month</div>
+                    </div>
+                </Box>
 
-            <Box
-                flexDirection={['column', 'row']}
-                justifyContent="center"
-                backgroundColor="white"
-                padding="0px"
-                marginLeft={['0px', '45px']}
-                marginRight={['0px', '45px']}
-                marginTop="25px"
-            >
+                <Box flexDirection={['column', 'row']} sx={{
+                    backgroundColor: 'white',
+                    // padding: '15px',
+                    // marginLeft: '30px',
+                    // marginRight: '30px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+
+                }}>
+                    <div style={curveGraphbox}>
+                        <div style={imageBox}>
+                            <img src="curvatureGraph.png" alt="curveGraph" width='100%'/>
+                        </div>
+                    </div>
+                    <div style={legendBox}>
+                        <div style={legendStyle}>
+                            <div style={titleText}>Legend</div>
+                            <table>
+                                <tr>
+                                    <th>
+                                        <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                    </th>
+                                    <th>
+                                        <tr>Thoracic</tr>
+                                        <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                            <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
+                                        </tr>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
+                                    </th>
+                                    <th>
+                                        <tr>Lumbar</tr>
+                                        <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
+                                            <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
+                                        </tr>
+                                    </th>
+                                </tr>
+                            </table>
+                            
+                            
+                        </div>
+                    </div>
+                </Box>
+
                 <Box
-                    style={buttonStatsStyle}
-                    flexDir={['column', 'column']}
-                    marginRight={['25px', '0px']}
-                    marginBottom={['0px', '25px']}
+                    flexDirection={['column', 'row']}
+                    justifyContent="center"
+                    backgroundColor="white"
+                    padding="0px"
+                    marginLeft={['0px', '0px']}
+                    marginRight={['0px', '0px']}
+                    marginTop="25px"
                 >
-                    <div style={physioButtonBox}>
-                        <Button>+ Physiotherapy</Button>
-                    </div>
-                    <div style={physioBox}>
-                        <TableContainer>
-                            <Table variant='simple'>
-                                <Thead>
-                                <Tr>
-                                    <Th>Session</Th>
-                                    <Th>Date</Th>
-                                    <Th isNumeric>Hours</Th>
-                                </Tr>
-                                </Thead>
-                                <Tbody>
-                                <Tr>
-                                    <Td>Physiotherapy with John</Td>
-                                    <Td>2023/06/12</Td>
-                                    <Td isNumeric>1:00</Td>
-                                </Tr>
-                                <Tr>
-                                    <Td>Schroth Method with Alice</Td>
-                                    <Td>2023/06/06</Td>
-                                    <Td isNumeric>0:30</Td>
-                                </Tr>
-                                <Tr>
-                                    <Td>Physiotherapy with John</Td>
-                                    <Td>2023/05/29</Td>
-                                    <Td isNumeric>1:30</Td>
-                                </Tr>
-                                <Tr>
-                                    <Td>Schroth Method with Alice</Td>
-                                    <Td>2023/05/14</Td>
-                                    <Td isNumeric>0:30</Td>
-                                </Tr>
-                                </Tbody>
-                            </Table>
-                        </TableContainer>
-                    </div>
-                </Box>
-                <Box style={buttonStatsStyle} flexDirection={['column', 'column']}>
-                    <div style={braceButtonBox}>
-                        <Button>+ Brace Wear</Button>
-                    </div>
-                    <div style={braceBox}>
-                        <img src="braceGraph.png" alt="braceGraph"/>
-                    </div>
+                    <Box
+                        style={buttonStatsStyle}
+                        flexDir={['column', 'row']}
+                        marginRight={['0px', '0px']}
+                        marginBottom={['0px', '0px']}
+                    >
+                        <Box flexDirection={['column', 'column']} w={'50%'} paddingRight={10}>
+                            <div style={physioButtonBox}>
+                                <Button>+ Physiotherapy</Button>
+                            </div>
+                            <div style={physioBox}>
+                                <TableContainer>
+                                    <Table variant='simple'>
+                                        <Thead>
+                                        <Tr>
+                                            <Th>Session</Th>
+                                            <Th>Date</Th>
+                                            <Th isNumeric>Hours</Th>
+                                        </Tr>
+                                        </Thead>
+                                        <Tbody>
+                                        <Tr>
+                                            <Td>Physiotherapy with John</Td>
+                                            <Td>2023/06/12</Td>
+                                            <Td isNumeric>1:00</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Schroth Method with Alice</Td>
+                                            <Td>2023/06/06</Td>
+                                            <Td isNumeric>0:30</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Physiotherapy with John</Td>
+                                            <Td>2023/05/29</Td>
+                                            <Td isNumeric>1:30</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Schroth Method with Alice</Td>
+                                            <Td>2023/05/14</Td>
+                                            <Td isNumeric>0:30</Td>
+                                        </Tr>
+                                        </Tbody>
+                                    </Table>
+                                </TableContainer>
+                            </div>
+                        </Box>
+                    
+                        <Box flexDirection={['column', 'column']} w={'50%'}>
+                            <div style={braceButtonBox}>
+                                <Button>+ Brace Wear</Button>
+                            </div>
+                            <div style={braceBox}>
+                                <img src="braceGraph.png" alt="braceGraph" width={'100%'}/>
+                            </div>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
+
 
             <div style={footerBox}>
                 <div style={footerText}>SpineCARE</div>
@@ -190,8 +196,8 @@ export default function Progress() {
 const all = {
     backgroundColor: 'white',
     minHeight: '100vh',
-    padding: '0px',
-    margin: '0px'
+    // padding: '3rem',
+    // margin: '0px'
 };
 
 const statsStyle: React.CSSProperties = {
@@ -249,7 +255,7 @@ const bottomStatText: React.CSSProperties = {
 
 const curveGraphbox: React.CSSProperties = {
     width: '80%',
-    marginLeft: '10px'
+    // marginLeft: '10px'
 };
 
 const legendBox: React.CSSProperties = {
@@ -294,9 +300,9 @@ const bottomStatsStyle: React.CSSProperties = {
 const buttonStatsStyle: React.CSSProperties = {
     backgroundColor: 'white',
     padding: '0px',
-    marginLeft: '45px',
-    marginRight: '45px',
-    marginTop: '25px',
+    // marginLeft: '45px',
+    // marginRight: '45px',
+    // marginTop: '25px',
     display: 'flex',
     justifyContent: 'left'
 };
@@ -325,7 +331,7 @@ const physioButtonBox: React.CSSProperties = {
 const braceBox: React.CSSProperties = {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     margin: '0px',
 };
 
@@ -335,7 +341,7 @@ const braceButtonBox: React.CSSProperties = {
     border: '0px solid #cccc',
     borderRadius: '10px',
     textAlign: 'left',
-    paddingLeft: '20px',
+    paddingLeft: '10px',
     marginTop: '0px',
 };
 
