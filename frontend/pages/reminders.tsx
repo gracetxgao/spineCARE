@@ -126,7 +126,34 @@ export default function Reminders() {
                     </Table>
                 </TableContainer>
             </Box>
+            <div style={footerBox}>
+                <div style={footerText}>SpineCARE</div>
+                <Link href={'https://github.com/gracetxgao/spineCARE'}>
+                <Image src='/github.png' alt='logo' width={10} height={10}/>
+                </Link>
+            </div>
         </Box>
     )
 }
+
+
+const footerBox: React.CSSProperties = {
+    width: '100vw',
+    height: '150px',
+    backgroundColor: '#EEF5FF',
+    display: 'flex',
+    alignItems: 'center', 
+    justifyContent: 'center',
+    flexDirection: 'column',
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+  };
+  
+const footerText: React.CSSProperties = {
+    textAlign: 'center',
+    fontWeight: 'normal',
+    fontFamily: 'helvetica',
+    paddingBottom: '20px'
+};
 
