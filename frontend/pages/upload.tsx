@@ -45,7 +45,7 @@ export default function Upload() {
     
             if (scol > norm) {
                 pred[0] = "Scoliosis"
-                pred[1] = scol
+                pred[1] = scol.toFixed(4) * 100
             } else {
                 pred[0] = "No scoliosis"
                 pred[1] = norm.toFixed(4) * 100
@@ -140,7 +140,7 @@ export default function Upload() {
             <Box p={5}>
             {file ? (
                 <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['100vw', '50vw']} h={'80vh'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-                <Image src={URL.createObjectURL(file)} alt="Selected Image" width='70%' height='auto' />
+                <Image src={URL.createObjectURL(file)} alt="Selected Image" width='auto' height='100%' />
                 </Box>
             ) : (
                 <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['100vw', '50vw']} h={'80vh'}></Box>
