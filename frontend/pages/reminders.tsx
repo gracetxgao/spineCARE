@@ -12,33 +12,32 @@ export default function Reminders() {
         <Box>
             <Flex
                 direction={['column', 'column', 'row']}
-                justify="space-between"
+                justify={['center', 'space-between', 'space-between']}
                 align="center"
                 backgroundColor="white"
                 color="black"
                 p={3}
                 mb={5}
+                w="100%"
             >
-            <Flex w="100%" justify={['space-between', 'space-between', 'space-between']} align="center" mb={[2, 2, 0]}>
                 <Flex align="center">
                     <Image src="logo_flower.png" alt="Logo" boxSize="90px" mr={3} />
                     <Text fontSize="1.2rem" fontFamily="helvetica">SpineCARE</Text>
                 </Flex>
-                <Flex direction={['row', 'row']} justify="center" align="center" w="100%">
+                <Flex direction='row' justify="center" align="center" mb={[3,0,0]}>
                     <Button sx={{ backgroundColor: 'white', fontFamily: 'helvetica', color: '#386DB3', border: 'none', padding: '10px 20px', cursor: 'pointer'}}>
                         <Link href="/scans">Scans</Link>
                     </Button>
-                    <Button sx={{ backgroundColor: 'white', fontFamily: 'helvetica', color: '#386DB3', border: 'none', padding: '10px 20px', cursor: 'pointer'}} marginInline={5}>
+                    <Button sx={{ backgroundColor: 'white', fontFamily: 'helvetica', color: '#386DB3', border: 'none', padding: '10px 20px', cursor: 'pointer' }} marginInline={[0, 0, 5]}>
                         <Link href="/progress">Progress</Link>
                     </Button>
-                    <Button>
+                    <Button >
                         <Link href="/reminders">Reminders</Link>
-                    </Button>     
+                    </Button>  
                 </Flex>
                 <Flex align="center">
                     <Button paddingInline={10}><Link href="/about">Sign Out</Link></Button>
                     <Image src="profileicon.png" alt="Profile" boxSize="50px" ml={3} mr={3} />
-                </Flex>
                 </Flex>
             </Flex>
             <Box p='2rem'>
