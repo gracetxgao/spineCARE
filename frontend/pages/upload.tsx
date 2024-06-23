@@ -19,20 +19,20 @@ export default function Upload() {
         formData.append('file', file);
 
         try {
-        const response = await fetch('http://localhost:5000/predict', {
-            method: 'POST',
-            body: formData,
-        });
+            const response = await fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                body: formData,
+            });
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
 
-        const data = await response.json();
-        setPredictions(data);
-        onOpen();
+            const data = await response.json();
+            setPredictions(data);
+            onOpen();
         } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+            console.error('There was a problem with the fetch operation:', error);
         }
     };
 
