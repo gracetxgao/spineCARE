@@ -70,7 +70,7 @@ export default function Upload() {
     };
 
     return (
-        <Box w="100%" ml={[5,0,0]}>
+        <Box>
             <Flex
                 direction={['column', 'column', 'row']}
                 justify={['center', 'space-between', 'space-between']}
@@ -102,50 +102,38 @@ export default function Upload() {
                 </Flex>
             </Flex>
 
-            <Flex align="center" justify="center" flex="1" flexDir={['column', 'row']} padding={'2rem'}>
-                <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['100vw', '50vw']} h={'80vh'} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                <VStack spacing={10} alignItems={'center'} display={'flex'}>
+            <Box display={"flex"} flexDirection={['column', 'row', 'row']} margin={[,0,'2rem']} alignItems={'center'} justifyContent={'center'}>
+                <Box sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['80vw', '40vw']} h={['50vh', '80vh']} display={'flex'} alignItems={'center'} justifyContent={'center'} flexDirection={"column"} p={10} mr={[0,5]} mb={[10,0]}>
                     <Text fontWeight={'bold'}>Upload an x-ray or back image</Text>
-                    <Input type="file" onChange={handleFileChange} />
+                    <Input type="file" onChange={handleFileChange} m={10}/>
                     <Button onClick={handleSubmit}>Predict</Button>
 
                     <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                    <ModalOverlay />
-                    <ModalContent>
-                        <ModalHeader>Prediction</ModalHeader>
-                        <ModalCloseButton />
-                        <ModalBody>
-                            {renderPrediction() || <Text>Loading...</Text>}
-                        {/* {predictions ? (
-                            <Box>
-                            <Text>This image shows:</Text>
-                            {Object.keys(predictions).map((label) => (
-                                <Text key={label}>{`${label}: ${predictions[label].toFixed(4)}`}</Text>
-                            ))}
-                            </Box>
-                        ) : (
-                            <Text>Loading...</Text>
-                        )} */}
-                        </ModalBody>
-                        <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        </ModalFooter>
-                    </ModalContent>
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>Prediction</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                {renderPrediction() || <Text>Loading...</Text>}
+                            </ModalBody>
+                            <ModalFooter>
+                            <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                Close
+                            </Button>
+                            </ModalFooter>
+                        </ModalContent>
                     </Modal>
-                </VStack>
                 </Box>
-                <Box p={5}>
-                {file ? (
-                    <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['100vw', '50vw']} h={'80vh'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-                    <Image src={URL.createObjectURL(file)} alt="Selected Image" width='auto' height='100%' />
-                    </Box>
-                ) : (
-                    <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['100vw', '50vw']} h={'80vh'}></Box>
-                )}
+                <Box ml={[0,5]}>
+                    {file ? (
+                        <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['80vw', '40vw']} h={['50vh', '80vh']} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                            <Image src={URL.createObjectURL(file)} alt="Selected Image" width='auto' height='100%' />
+                        </Box>
+                    ) : (
+                        <Box p={10} sx={{ borderWidth: '5px', borderRadius: '20px' }} w={['80vw', '40vw']} h={['50vh', '80vh']}></Box>
+                    )}
                 </Box>
-            </Flex>
+            </Box>
         </Box>
     );
 }

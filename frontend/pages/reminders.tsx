@@ -165,12 +165,12 @@ export default function Reminders() {
                     </Table>
                 </TableContainer>
             </Box>
-            <div style={footerBox}>
-                <div style={footerText}>SpineCARE</div>
+            <Box style={footerBox}>
+                <Box style={footerText}>SpineCARE</Box>
                 <Link href={'https://github.com/gracetxgao/spineCARE'}>
                 <Image src='/github.png' alt='logo' width={10} height={10}/>
                 </Link>
-            </div>
+            </Box>
         </Box>
     )
 }

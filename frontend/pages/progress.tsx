@@ -6,7 +6,7 @@ import { SmallCloseIcon} from '@chakra-ui/icons'
 
 export default function Progress() {
     return (
-        <div style={all}>
+        <Box style={all}>
             <Flex
                 direction={['column', 'column', 'row']}
                 justify={['center', 'space-between', 'space-between']}
@@ -40,14 +40,14 @@ export default function Progress() {
 
             <Box p='2rem'>
                 <Box flexDirection={['column', 'row']}
-                sx={{
-                    backgroundColor: 'white',
-                    // padding: '15px',
-                    // marginLeft: '30px',
-                    // marginRight: '30px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                }}>
+                    sx={{
+                        backgroundColor: 'white',
+                        // padding: '15px',
+                        // marginLeft: '30px',
+                        // marginRight: '30px',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                    }}>
                     <div style={curveStatStyle}>
                         <div style={topStatText}>Current Curvature</div>
                         <div style={middleStatText}>31°, 20°</div>
@@ -65,73 +65,65 @@ export default function Progress() {
                     </div>
                 </Box>
 
-                <Box flexDirection={['column', 'row']} sx={{
-                    backgroundColor: 'white',
-                    // padding: '15px',
-                    // marginLeft: '30px',
-                    // marginRight: '30px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
+                <Box 
+                    flexDirection={['column', 'row']} 
+                    sx={{
+                        backgroundColor: 'white',
+                        // padding: '15px',
+                        // marginLeft: '30px',
+                        // marginRight: '30px',
+                        display: 'flex',
+                        justifyContent: 'space-between',
 
-                }}>
-                    <div style={curveGraphbox}>
-                        <div style={imageBox}>
-                            <img src="curvatureGraph.png" alt="curveGraph" width='100%'/>
-                        </div>
-                    </div>
-                    <div style={legendBox}>
-                        <div style={legendStyle}>
-                            <div style={titleText}>Legend</div>
-                            <table>
-                                <tr>
-                                    <th>
-                                        <img src="greycircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                    </th>
-                                    <th>
-                                        <tr>Thoracic</tr>
-                                        <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                            <div style={{color: '#8A8F92'}}>current: 31 degrees</div>
-                                        </tr>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <img src="bluecircle.png" style={{ width: '70px', height: 'auto' }}/>
-                                    </th>
-                                    <th>
-                                        <tr>Lumbar</tr>
-                                        <tr style={{fontWeight: 'normal', fontSize: 'small', fontFamily: 'helvetica'}}>
-                                            <div style={{color: '#8A8F92'}}>current: 20 degrees</div>
-                                        </tr>
-                                    </th>
-                                </tr>
-                            </table>
-                            
-                            
-                        </div>
-                    </div>
+                    }}
+                >
+                    <Box sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)', border: '1px solid #cccc', borderRadius: '10px', }} p={'5px'} m={'20px'}>
+                        <Image src="curvatureGraph.png" alt="curveGraph" width='100%' h="auto"/>
+                    </Box>
+                    <Box style={legendStyle} h="100%" m={'20px'} p={'20px'}>
+                        <TableContainer>
+                            <Table size='sm'>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Legend</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr>
+                                        <Td>
+                                            <Image src="greycircle.png" alt='grey circle' w="20%" h="auto"/>
+                                        </Td>
+                                        <Td>Thoracic</Td>
+                                        <Td>current: 31 degrees</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td>
+                                            <Image src="bluecircle.png" alt='blue circle' w="20%" h="auto"/>
+                                        </Td>
+                                        <Td>Lumbar</Td>
+                                        <Td>current: 20 degrees</Td>
+                                    </Tr>
+                                </Tbody>
+                            </Table>
+                        </TableContainer>
+                    </Box>
                 </Box>
 
                 <Box
                     flexDirection={['column', 'row']}
                     justifyContent="center"
                     backgroundColor="white"
-                    padding="0px"
-                    marginLeft={['0px', '0px']}
-                    marginRight={['0px', '0px']}
-                    marginTop="25px"
+                    padding="20px"
                 >
                     <Box
                         style={buttonStatsStyle}
                         flexDir={['column', 'row']}
-                        marginRight={['0px', '0px']}
-                        marginBottom={['0px', '0px']}
                     >
-                        <Box flexDirection={['column', 'column']} w={'50%'} paddingRight={10}>
-                            <div style={physioButtonBox}>
+                        <Box flexDirection={['column', 'column']} w={['100%', '50%']} paddingRight={10}>
+                            <Box style={physioButtonBox}>
                                 <Button>+ Physiotherapy</Button>
-                            </div>
-                            <div style={physioBox}>
+                            </Box>
+                            <Box style={physioBox}>
                                 <TableContainer>
                                     <Table variant='simple'>
                                         <Thead>
@@ -165,16 +157,16 @@ export default function Progress() {
                                         </Tbody>
                                     </Table>
                                 </TableContainer>
-                            </div>
+                            </Box>
                         </Box>
                     
-                        <Box flexDirection={['column', 'column']} w={'50%'}>
-                            <div style={braceButtonBox}>
+                        <Box flexDirection={['column', 'column']} w={['100%', '50%']}>
+                            <Box style={braceButtonBox}>
                                 <Button>+ Brace Wear</Button>
-                            </div>
-                            <div style={braceBox}>
-                                <img src="braceGraph.png" alt="braceGraph" width={'100%'}/>
-                            </div>
+                            </Box>
+                            <Box sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)', border: '1px solid #cccc', borderRadius: '10px', }} p={'10px'} m={'10px'} >
+                                <Image src="braceGraph.png" alt="braceGraph" width={'100%'}/>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
@@ -187,7 +179,7 @@ export default function Progress() {
                 <Image src='/github.png' alt='logo' width={10} height={10}/>
                 </Link>
             </div>
-        </div>
+        </Box>
 
     )
 }
@@ -253,12 +245,12 @@ const bottomStatText: React.CSSProperties = {
 };
 
 const curveGraphbox: React.CSSProperties = {
-    width: '80%',
+    width: '100%',
     // marginLeft: '10px'
 };
 
 const legendBox: React.CSSProperties = {
-    width: '20%',
+    width: '100%',
 };
 
 const imageBox: React.CSSProperties = {
@@ -275,8 +267,8 @@ const legendStyle: React.CSSProperties = {
     flex: '1',
     textAlign: 'left',
     padding: '20px',
-    marginTop: '7px',
-    margin: '20px',
+    // marginTop: '7px',
+    // margin: '20px',
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)'
 };
 
