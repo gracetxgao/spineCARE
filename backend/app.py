@@ -6,7 +6,10 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000', 'https://spinecare.vercel.app/', 'https://spinecare-graces-projects-2051e3b2.vercel.app/', 'https://vercel.com/graces-projects-2051e3b2/spinecare/AYiS4zrLd6ivTCgSMcYVgnKz7Deq'])
+CORS(app, origins=['http://localhost:3000', 
+                   'https://spinecare.vercel.app', 
+                   'https://spinecare-graces-projects-2051e3b2.vercel.app', 
+                   'https://vercel.com/graces-projects-2051e3b2/spinecare/AYiS4zrLd6ivTCgSMcYVgnKz7Deq'])
 
 model, preprocess = create_model_from_pretrained('hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')
 tokenizer = get_tokenizer('hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')
