@@ -6,10 +6,9 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, origins=[
+CORS(app, origins=['http://localhost:3000', 
                    'https://spinecare.vercel.app', 
                    'https://spinecare-graces-projects-2051e3b2.vercel.app', 
-                   'https://vercel.com/graces-projects-2051e3b2/spinecare/AYiS4zrLd6ivTCgSMcYVgnKz7Deq',
                    'https://vercel.com/graces-projects-2051e3b2/spinecare/GVFwkagWb9EZLm6PuunJXMv83Yrg',
                    'https://spinecare-git-main-graces-projects-2051e3b2.vercel.app/'])
 
@@ -47,7 +46,12 @@ def predict():
     logits = logits.cpu().numpy()[0]
     predictions = {labels[i]: float(logits[i]) for i in range(len(labels))}
     response = make_response(jsonify(predictions))
-    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+    response.headers.add("Access-Control-Allow-Origin", 
+                         ['http://localhost:3000', 
+                        'https://spinecare.vercel.app', 
+                        'https://spinecare-graces-projects-2051e3b2.vercel.app', 
+                        'https://vercel.com/graces-projects-2051e3b2/spinecare/GVFwkagWb9EZLm6PuunJXMv83Yrg',
+                        'https://spinecare-git-main-graces-projects-2051e3b2.vercel.app/'])
     response.headers.add("Access-Control-Allow-Headers", "Content-Type")
     response.headers.add("Access-Control-Allow-Methods", "POST")
     return response
