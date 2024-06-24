@@ -47,7 +47,8 @@ export default function About() {
               A tool designed to support individuals on their journey with adolescent idiopathic scoliosis, utilizing artificial intelligence to monitor spinal curvature.
             </Text>
             <Text>
-              Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui  international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur.
+            Adolescent Idiopathic Scoliosis, AIS, is a sideways curvature of the spine that emerges during late childhood. This condition manifests significantly during adolescence, making time-sensitive treatment and early diagnosis crucial. Unfortunately, scoliosis screening has not been performed in Canadian schools for decades which means that many affected children are not aware of their conditions until it may be too late.
+            Our app provides a cost-effective and easily accessible alternative to frequent hospital visits for the purpose of taking x-ray scans which can be both expensive and have adverse health effects in the long term.
             </Text>
           </VStack>
         </Box>
@@ -67,7 +68,7 @@ export default function About() {
         </Box>
         <Box display="flex" flexDirection={['column', 'column', 'row']} flexWrap="wrap" justifyContent="center">
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/aina.jpeg' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Aina Merchant</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
@@ -77,7 +78,7 @@ export default function About() {
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/grace.jpeg' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Grace Gao</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
