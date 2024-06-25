@@ -73,7 +73,7 @@ export default function About() {
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/alicia.JPG' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Alicia Zhang</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
@@ -83,27 +83,27 @@ export default function About() {
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/katie.jpg' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Katie Sun</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/mary.jpeg' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Mary Kong</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/negareh.JPG' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Negareh Mahboubi</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Trainee</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
-            <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Paige Tuttosi</Text>
+            <Image src='/paige.jpg' alt='logo' width={200} height={200} />
+            <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Paige Tuttösi</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>TA</Text>
           </Box>
           <Box p={5} borderWidth={5} borderRadius={10} m={10}>
-            <Image src='/pfp.jpg' alt='logo' width={200} height={200} />
+            <Image src='/Diana.jpeg' alt='logo' width={200} height={200} />
             <Text textAlign="center" mt={10} fontSize={['md', 'md', 'lg']} fontWeight="bold">Diana Moyano</Text>
             <Text textAlign="center" mt={3} fontSize={['sm', 'sm', 'md']}>Mentor</Text>
           </Box>
